@@ -4,7 +4,6 @@ class ScriptConfig(TypedDict):
     input_dir: str
     output_dir: str
     template_dir: str
-    patches_dir: str
 
 class RepoConfig(TypedDict):
     title: str
@@ -22,7 +21,8 @@ class PatchMetaData(TypedDict):
     author: str
     readme: str
     version: str
-    date: str
+    initDate: str
+    modDate: str
     uuid: str
     sha256: str
     priority: int

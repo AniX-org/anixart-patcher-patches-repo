@@ -29,6 +29,7 @@ def check_manifest(manifest: RepoManifest):
         console.print("[bold red]Maintainer is required[/bold red]")
         exit(1)
 
+
 def confirm_manifest(manifest: RepoManifest):
     # sourcery skip: extract-duplicate-method
     console.print("[bold]Repo details[/bold]")
@@ -50,7 +51,7 @@ def save_collected_input(manifest: RepoManifest):
         exit(1)
 
     with open(f"{config['input_dir']}/manifest.json", "w", encoding="utf-8") as f:
-        json.dump(manifest, f, indent=4)
+        json.dump(manifest, f, indent=4, ensure_ascii=False)
 
 
 if __name__ == "__main__":
