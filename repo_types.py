@@ -1,8 +1,9 @@
 from typing import TypedDict, NotRequired, Any
 
 class ScriptConfig(TypedDict):
-    output_dir: str = "./dist"
-    template_dir: str = "./templates"
+    input_dir: str
+    output_dir: str
+    template_dir: str
     patches_dir: str
 
 class RepoConfig(TypedDict):
@@ -14,11 +15,6 @@ class RepoMaintainerConfig(TypedDict):
     maintainer: str
     url: str
 
-class Config(TypedDict):
-    script: ScriptConfig
-    repo: RepoConfig
-    maintainer: RepoMaintainerConfig
-
 class PatchMetaData(TypedDict):
     filename: str
     title: str
@@ -29,9 +25,13 @@ class PatchMetaData(TypedDict):
     date: str
     uuid: str
     sha256: str
+    priority: int
+    tags: list[str]
     settings: NotRequired[dict[str, Any]]
 
 class RepoManifest(TypedDict):
     repo: RepoConfig
     maintainer: RepoMaintainerConfig
     patches: list[PatchMetaData]
+
+PatchTags: list[str] = ["UI", "Code", "undefined"]
