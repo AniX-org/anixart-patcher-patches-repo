@@ -62,10 +62,13 @@ def update_patch_list():
 def generate_repo():
     if os.path.exists(config["output_dir"]):
         shutil.rmtree(config["output_dir"])
-    os.makedirs(config["output_dir"])
+    os.makedirs(os.path.join(config["output_dir"], "patches"))
 
-    shutil.copytree(config["input_dir"], config["output_dir"], dirs_exist_ok=True)
+    for file in patchList:
+        if file.endswith(".py"):
+            shutil.copyfile(f"{patchPath}/{file}", f"{config['output_dir']}/patches/{file}")
 
+    shutil.copyfile(f"{config['input_dir']}/manifest.json", f"{config['output_dir']}/manifest.json")
     template = env.get_template("index.html")
     with open(f"{config['input_dir']}/manifest.json", "r", encoding="utf-8") as f:
         manifest = json.load(f)
