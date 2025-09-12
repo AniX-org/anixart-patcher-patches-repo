@@ -1,0 +1,12 @@
+{
+    "repo": {
+        "title": "Anixart-Patcher Official Patch Repository",
+        "url": "https://github.com/AniX-org/anixart-patcher-patches-repo/tree/gh-pages",
+        "uuid": "e4efc079-67f0-4e8d-8370-f1b06eb09882"
+    },
+    "maintainer": {
+        "maintainer": "AniX-org (@Radiquum)",
+        "url": "https://github.com/AniX-org"
+    },
+    "patches": []
+}
