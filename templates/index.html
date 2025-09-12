@@ -63,6 +63,10 @@
             >{{ maintainer.maintainer | e }}</a
           >
         </p>
+        <p>
+          To add this repo use the command: patcher.py --add
+          <span id="repoUrl"></span>
+        </p>
       </header>
 
       <!-- Search / Filters -->
@@ -73,9 +77,6 @@
           placeholder="Search patches by title, filename, author or tag..."
           aria-label="Search patches"
         />
-        <div class="form-text small-muted mt-1">
-          Type to filter. Filters client-side for fast browsing.
-        </div>
       </div>
 
       <!-- Patches grid -->
@@ -193,6 +194,11 @@
           });
         });
       })();
+    </script>
+    <script>
+      window.onload = () => {
+        repoUrl.textContent = window.location;
+      };
     </script>
   </body>
 </html>
