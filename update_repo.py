@@ -23,6 +23,13 @@ def format_datetime(timestamp):
 
 env.filters["convert_datetime"] = format_datetime
 
+def check_folder(folder):
+    if not os.path.exists(folder):
+        os.makedirs(folder, exist_ok=True)
+
+def check_folders():
+    check_folder(os.path.join(config["input_dir"], "patches"))
+    check_folder(os.path.join(config["output_dir"], "patches"))
 
 def update_patch_sha_and_modtime():
     for file in patchList:
@@ -78,6 +85,7 @@ def generate_repo():
 
 
 def update_manifest():
+    check_folders()
     update_patch_sha_and_modtime()
     update_patch_list()
     generate_repo()
