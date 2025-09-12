@@ -86,7 +86,7 @@ def update_resource_list():
                     for byte_block in iter(lambda: f.read(4096), b""):
                         sha256_hash.update(byte_block)
                     manifest["resources"].append(
-                        {"filename": f"{root.removeprefix(config['input_dir'])[1:]}/{fi}", "sha256": sha256_hash.hexdigest()}
+                        {"filename": fi, "sha256": sha256_hash.hexdigest()}
                     )
         with open(f"{config['input_dir']}/manifest.json", "w", encoding="utf-8") as fo:
             json.dump(manifest, fo, indent=4, ensure_ascii=False)
