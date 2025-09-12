@@ -64,6 +64,7 @@ def confirm_metadata(metadata: PatchMetaData):
 
 def save_collected_input(metadata: PatchMetaData):
     os.makedirs(os.path.join(config["input_dir"], "patches"), exist_ok=True)
+    os.makedirs(os.path.join(config["input_dir"], "resources"), exist_ok=True)
 
     if os.path.exists(
         f"{config['input_dir']}/{metadata['filename']}"

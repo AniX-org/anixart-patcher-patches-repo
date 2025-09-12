@@ -18,6 +18,8 @@ def check_folder(folder):
 def check_folders():
     check_folder(os.path.join(config["input_dir"], "patches"))
     check_folder(os.path.join(config["output_dir"], "patches"))
+    check_folder(os.path.join(config["input_dir"], "resources"))
+    check_folder(os.path.join(config["output_dir"], "resources"))
 
 
 check_folders()

@@ -43,6 +43,8 @@ def confirm_manifest(manifest: RepoManifest):
 
 def save_collected_input(manifest: RepoManifest):
     os.makedirs(config["input_dir"], exist_ok=True)
+    os.makedirs(os.path.join(config["input_dir"], "patches"), exist_ok=True)
+    os.makedirs(os.path.join(config["input_dir"], "resources"), exist_ok=True)
 
     if os.path.exists(f"{config['input_dir']}/manifest.json"):
         console.print(
