@@ -17,7 +17,7 @@ def patch_config_name(patch_name: str) -> str:
 
 
 def collect_user_input():
-    date = datetime.now().isoformat()
+    date = int(datetime.now().timestamp())
     metadata = PatchMetaData(
         filename="",
         title="",

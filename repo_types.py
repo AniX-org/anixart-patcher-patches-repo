@@ -8,6 +8,8 @@ class ScriptConfig(TypedDict):
 class RepoConfig(TypedDict):
     title: str
     url: str
+    initDate: str
+    modDate: str
     uuid: str
 
 class RepoMaintainerConfig(TypedDict):
