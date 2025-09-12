@@ -79,6 +79,7 @@ def generate_repo():
     if os.path.exists(config["output_dir"]):
         shutil.rmtree(config["output_dir"])
     os.makedirs(os.path.join(config["output_dir"], "patches"))
+    os.makedirs(os.path.join(config["output_dir"], "resources"))
 
     for file in patchList:
         if file.endswith(".py"):
@@ -86,6 +87,11 @@ def generate_repo():
                 f"{patchPath}/{file}", f"{config['output_dir']}/patches/{file}"
             )
 
+    shutil.copytree(
+        f"{config['input_dir']}/resources",
+        f"{config['output_dir']}/resources",
+        dirs_exist_ok=True,
+    )
     shutil.copyfile(
         f"{config['input_dir']}/manifest.json", f"{config['output_dir']}/manifest.json"
     )
