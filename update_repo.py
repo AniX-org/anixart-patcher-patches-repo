@@ -7,6 +7,7 @@ import datetime
 patchPath = os.path.join(config["input_dir"], "patches")
 patchList = os.listdir(patchPath)
 
+
 def update_patch_sha_and_modtime():
     for file in patchList:
         if file.endswith(".json"):
@@ -16,7 +17,9 @@ def update_patch_sha_and_modtime():
         with open(f"{patchPath}/{file}", "rb") as f:
             for byte_block in iter(lambda: f.read(4096), b""):
                 sha256_hash.update(byte_block)
-        modTime = datetime.datetime.fromtimestamp(os.path.getmtime(f"{patchPath}/{file}"))
+        modTime = datetime.datetime.fromtimestamp(
+            os.path.getmtime(f"{patchPath}/{file}")
+        )
 
         with open(f"{patchPath}/{file}.json", "r", encoding="utf-8") as f:
             metadata = json.load(f)
@@ -27,11 +30,23 @@ def update_patch_sha_and_modtime():
 
 
 def update_patch_list():
-    pass
+    with open(f"{config['input_dir']}/manifest.json", "r", encoding="utf-8") as f:
+        manifest = json.load(f)
+        manifest["patches"] = []
+        for file in patchList:
+            if file.endswith(".json"):
+                with open(f"{patchPath}/{file}", "r", encoding="utf-8") as fi:
+                    metadata = json.load(fi)
+                    manifest["patches"].append(metadata)
+        with open(f"{config['input_dir']}/manifest.json", "w", encoding="utf-8") as fo:
+            json.dump(manifest, fo, indent=4, ensure_ascii=False)
+
 
 def update_manifest():
     update_patch_sha_and_modtime()
     update_patch_list()
 
+
 if __name__ == "__main__":
     update_manifest()
+    print("DONE")
