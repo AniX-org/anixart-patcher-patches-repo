@@ -14,6 +14,7 @@ def collect_user_input():
     manifest["repo"] = RepoConfig(title="", url="", uuid=str(uuid.uuid4()))
     manifest["maintainer"] = RepoMaintainerConfig(maintainer="", url="")
     manifest["patches"] = []
+    manifest["resources"] = []
     manifest["repo"]["title"] = prompt("Repo title: ")
     manifest["repo"]["url"] = prompt("Repo URL: ")
     manifest["maintainer"]["maintainer"] = prompt("Maintainer: ")
