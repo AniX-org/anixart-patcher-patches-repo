@@ -18,6 +18,8 @@ def check_folder(folder):
 def check_folders():
     check_folder(os.path.join(config["input_dir"], "patches"))
     check_folder(os.path.join(config["output_dir"], "patches"))
+    check_folder(os.path.join(config["input_dir"], "resources"))
+    check_folder(os.path.join(config["output_dir"], "resources"))
 
 
 check_folders()
@@ -73,10 +75,28 @@ def update_patch_list():
             json.dump(manifest, fo, indent=4, ensure_ascii=False)
 
 
+def update_resource_list():
+    with open(f"{config['input_dir']}/manifest.json", "r", encoding="utf-8") as f:
+        manifest = json.load(f)
+        manifest["resources"] = []
+        for root, dirs, files in os.walk(f"{config['input_dir']}/resources"):
+            for fi in files:
+                sha256_hash = hashlib.sha256()
+                with open(f"{config['input_dir']}/resources/{fi}", "rb") as f:
+                    for byte_block in iter(lambda: f.read(4096), b""):
+                        sha256_hash.update(byte_block)
+                    manifest["resources"].append(
+                        {"filename": f"{root.removeprefix(config['input_dir'])[1:]}/{fi}", "sha256": sha256_hash.hexdigest()}
+                    )
+        with open(f"{config['input_dir']}/manifest.json", "w", encoding="utf-8") as fo:
+            json.dump(manifest, fo, indent=4, ensure_ascii=False)
+
+
 def generate_repo():
     if os.path.exists(config["output_dir"]):
         shutil.rmtree(config["output_dir"])
     os.makedirs(os.path.join(config["output_dir"], "patches"))
+    os.makedirs(os.path.join(config["output_dir"], "resources"))
 
     for file in patchList:
         if file.endswith(".py"):
@@ -84,6 +104,11 @@ def generate_repo():
                 f"{patchPath}/{file}", f"{config['output_dir']}/patches/{file}"
             )
 
+    shutil.copytree(
+        f"{config['input_dir']}/resources",
+        f"{config['output_dir']}/resources",
+        dirs_exist_ok=True,
+    )
     shutil.copyfile(
         f"{config['input_dir']}/manifest.json", f"{config['output_dir']}/manifest.json"
     )
@@ -98,6 +123,7 @@ def generate_repo():
 def update_manifest():
     update_patch_sha_and_modtime()
     update_patch_list()
+    update_resource_list()
     generate_repo()
 
 

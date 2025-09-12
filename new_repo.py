@@ -14,6 +14,7 @@ def collect_user_input():
     manifest["repo"] = RepoConfig(title="", url="", uuid=str(uuid.uuid4()))
     manifest["maintainer"] = RepoMaintainerConfig(maintainer="", url="")
     manifest["patches"] = []
+    manifest["resources"] = []
     manifest["repo"]["title"] = prompt("Repo title: ")
     manifest["repo"]["url"] = prompt("Repo URL: ")
     manifest["maintainer"]["maintainer"] = prompt("Maintainer: ")
@@ -43,6 +44,8 @@ def confirm_manifest(manifest: RepoManifest):
 
 def save_collected_input(manifest: RepoManifest):
     os.makedirs(config["input_dir"], exist_ok=True)
+    os.makedirs(os.path.join(config["input_dir"], "patches"), exist_ok=True)
+    os.makedirs(os.path.join(config["input_dir"], "resources"), exist_ok=True)
 
     if os.path.exists(f"{config['input_dir']}/manifest.json"):
         console.print(
