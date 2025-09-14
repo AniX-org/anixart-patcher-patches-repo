@@ -1,0 +1,17 @@
+{
+    "filename": "disable_3rdparty_login.py",
+    "title": "Отключить вход с помощью сервисов",
+    "description": "Патч отключает логин с помощью Google и VK",
+    "author": "Radiquum, wowlikon",
+    "readme": "",
+    "version": "1.0.0",
+    "initDate": "1757862822",
+    "modDate": "1757863603",
+    "uuid": "706f4c12-baee-453a-a293-c0aa86472b58",
+    "sha256": "968d61fa2056412f43731646130e67bb1ddff12e2f40fe1b01b502568b6ab2dc",
+    "priority": 10,
+    "tags": [
+        "UI"
+    ],
+    "settings": {}
+}

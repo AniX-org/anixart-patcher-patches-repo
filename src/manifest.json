@@ -3,7 +3,7 @@
         "title": "Anixart-Patcher Official Patch Repository",
         "url": "https://github.com/AniX-org/anixart-patcher-patches-repo/tree/gh-pages",
         "uuid": "e4efc079-67f0-4e8d-8370-f1b06eb09882",
-        "modDate": "1757846308"
+        "modDate": "1757863660"
     },
     "maintainer": {
         "maintainer": "AniX-org (@Radiquum)",
@@ -38,6 +38,23 @@
             "modDate": "1757845787",
             "uuid": "3fbe2d93-7734-4b1e-99f4-e9fb435b7532",
             "sha256": "0e23eb83c73ab944ef9f9662815a0fc79b455dd9a70a666ef8528cb3b5f60945",
+            "priority": 10,
+            "tags": [
+                "UI"
+            ],
+            "settings": {}
+        },
+        {
+            "filename": "disable_3rdparty_login.py",
+            "title": "Отключить вход с помощью сервисов",
+            "description": "Патч отключает логин с помощью Google и VK",
+            "author": "Radiquum, wowlikon",
+            "readme": "",
+            "version": "1.0.0",
+            "initDate": "1757862822",
+            "modDate": "1757863603",
+            "uuid": "706f4c12-baee-453a-a293-c0aa86472b58",
+            "sha256": "968d61fa2056412f43731646130e67bb1ddff12e2f40fe1b01b502568b6ab2dc",
             "priority": 10,
             "tags": [
                 "UI"
