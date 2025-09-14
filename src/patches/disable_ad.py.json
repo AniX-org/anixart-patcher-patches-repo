@@ -2,7 +2,7 @@
     "filename": "disable_ad.py",
     "title": "Отключить рекламу",
     "description": "Патч отключает рекламу, включая \"локальную\" спонсорку",
-    "author": "Radiquum",
+    "author": "Radiquum, Modding Apps",
     "readme": "",
     "version": "1.0.0",
     "initDate": "1757689732",
@@ -11,7 +11,7 @@
     "sha256": "f3c4f96b9a886f8c5c8935f00d56ec7358dd16c8d5ca78330c0fe3e56cf0b85b",
     "priority": 10,
     "tags": [
-        "undefined"
+        "UI"
     ],
     "settings": {}
 }

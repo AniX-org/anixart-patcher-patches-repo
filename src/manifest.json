@@ -3,7 +3,7 @@
         "title": "Anixart-Patcher Official Patch Repository",
         "url": "https://github.com/AniX-org/anixart-patcher-patches-repo/tree/gh-pages",
         "uuid": "e4efc079-67f0-4e8d-8370-f1b06eb09882",
-        "modDate": "1757839831"
+        "modDate": "1757846308"
     },
     "maintainer": {
         "maintainer": "AniX-org (@Radiquum)",
@@ -14,16 +14,33 @@
             "filename": "disable_ad.py",
             "title": "Отключить рекламу",
             "description": "Патч отключает рекламу, включая \"локальную\" спонсорку",
-            "author": "Radiquum",
+            "author": "Radiquum, Modding Apps",
             "readme": "",
             "version": "1.0.0",
             "initDate": "1757689732",
             "modDate": "1757839758",
             "uuid": "0e773f54-9bd7-4346-9313-e7fb8f4f9d9e",
             "sha256": "f3c4f96b9a886f8c5c8935f00d56ec7358dd16c8d5ca78330c0fe3e56cf0b85b",
-            "priority": 0,
+            "priority": 10,
             "tags": [
-                "undefined"
+                "UI"
+            ],
+            "settings": {}
+        },
+        {
+            "filename": "disable_beta_banner.py",
+            "title": "Отключить баннер о бета версии",
+            "description": "Патч отключает баннер, что приложение является бета версией на главной странице в вкладке последнее",
+            "author": "Radiquum, Modding Apps",
+            "readme": "",
+            "version": "1.0.0",
+            "initDate": "1757840464",
+            "modDate": "1757845787",
+            "uuid": "3fbe2d93-7734-4b1e-99f4-e9fb435b7532",
+            "sha256": "0e23eb83c73ab944ef9f9662815a0fc79b455dd9a70a666ef8528cb3b5f60945",
+            "priority": 10,
+            "tags": [
+                "UI"
             ],
             "settings": {}
         }
