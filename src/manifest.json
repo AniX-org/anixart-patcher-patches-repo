@@ -2,11 +2,31 @@
     "repo": {
         "title": "Anixart-Patcher Official Patch Repository",
         "url": "https://github.com/AniX-org/anixart-patcher-patches-repo/tree/gh-pages",
-        "uuid": "e4efc079-67f0-4e8d-8370-f1b06eb09882"
+        "uuid": "e4efc079-67f0-4e8d-8370-f1b06eb09882",
+        "modDate": "1757839831"
     },
     "maintainer": {
         "maintainer": "AniX-org (@Radiquum)",
         "url": "https://github.com/AniX-org"
     },
-    "patches": []
+    "patches": [
+        {
+            "filename": "disable_ad.py",
+            "title": "Отключить рекламу",
+            "description": "Патч отключает рекламу, включая \"локальную\" спонсорку",
+            "author": "Radiquum",
+            "readme": "",
+            "version": "1.0.0",
+            "initDate": "1757689732",
+            "modDate": "1757839758",
+            "uuid": "0e773f54-9bd7-4346-9313-e7fb8f4f9d9e",
+            "sha256": "f3c4f96b9a886f8c5c8935f00d56ec7358dd16c8d5ca78330c0fe3e56cf0b85b",
+            "priority": 0,
+            "tags": [
+                "undefined"
+            ],
+            "settings": {}
+        }
+    ],
+    "resources": []
 }

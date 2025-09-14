@@ -82,6 +82,7 @@ def save_collected_input(metadata: PatchMetaData):
 # imports
 from typing import TypedDict
 from config import config, log
+from scripts.patch_funcs import PatchGlobals
 
 
 # Patch
@@ -89,7 +90,7 @@ class {patch_config_name(metadata['filename'].replace('.py', ''))}(TypedDict):
     pass
 
 
-def apply(patch_conf: {patch_config_name(metadata['filename'].replace('.py', ''))}) -> bool:
+def apply(settings: {patch_config_name(metadata['filename'].replace('.py', ''))}, globals: PatchGlobals) -> bool:
     log.info("patch `{metadata['title']}` ({metadata['filename']}) applied, nothing changed")
     return True
 """
@@ -112,7 +113,7 @@ def apply(patch_conf: {patch_config_name(metadata['filename'].replace('.py', '')
         f"[bold green]Patch {config['input_dir']}/patches/{metadata['filename']} saved![/bold green]"
     )
     console.print(
-        "[bold]NOTE:[/bold] run `update_repo.py` to update sha256 hashes and modDate"
+        "[bold]NOTE:[/bold] run `update_repo.py` to add patch to repo and update sha256 hashes"
     )
 
 
