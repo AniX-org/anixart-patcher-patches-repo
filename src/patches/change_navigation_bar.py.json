@@ -1,0 +1,32 @@
+{
+    "filename": "change_navigation_bar.py",
+    "title": "Изменить бар навигации",
+    "description": "Патч изменяет расположение и/или удаляет элементы из бара навигации",
+    "author": "Radiquum",
+    "readme": "",
+    "version": "1.0.0",
+    "initDate": "1758003325",
+    "modDate": "1758003924",
+    "uuid": "b10ab66c-2c38-498d-afe7-934455a6efe8",
+    "sha256": "99bc1f63c2608501ff9874bd94369eef1c337073396dd4f90235c9214f12263e",
+    "priority": 10,
+    "tags": [
+        "UI"
+    ],
+    "settings": {
+        "portrait": [
+            "home",
+            "discover",
+            "feed",
+            "bookmarks",
+            "profile"
+        ],
+        "landscape": [
+            "home",
+            "discover",
+            "feed",
+            "bookmarks",
+            "profile"
+        ]
+    }
+}
