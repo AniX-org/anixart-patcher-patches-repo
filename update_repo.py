@@ -80,13 +80,14 @@ def update_resource_list():
         manifest = json.load(f)
         manifest["resources"] = []
         for root, dirs, files in os.walk(f"{config['input_dir']}/resources"):
+            directory = root.removeprefix(f"{config['input_dir']}/resources")
             for fi in files:
                 sha256_hash = hashlib.sha256()
                 with open(f"{root}/{fi}", "rb") as f:
                     for byte_block in iter(lambda: f.read(4096), b""):
                         sha256_hash.update(byte_block)
                     manifest["resources"].append(
-                        {"filename": fi, "sha256": sha256_hash.hexdigest()}
+                        {"filename": fi, "directory": directory, "sha256": sha256_hash.hexdigest()}
                     )
         with open(f"{config['input_dir']}/manifest.json", "w", encoding="utf-8") as fo:
             json.dump(manifest, fo, indent=4, ensure_ascii=False)
