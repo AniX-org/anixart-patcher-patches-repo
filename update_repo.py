@@ -82,7 +82,7 @@ def update_resource_list():
         for root, dirs, files in os.walk(f"{config['input_dir']}/resources"):
             for fi in files:
                 sha256_hash = hashlib.sha256()
-                with open(f"{config['input_dir']}/resources/{fi}", "rb") as f:
+                with open(f"{root}/{fi}", "rb") as f:
                     for byte_block in iter(lambda: f.read(4096), b""):
                         sha256_hash.update(byte_block)
                     manifest["resources"].append(
