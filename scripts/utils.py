@@ -10,3 +10,15 @@ def save_apktool_yml(
     versionName: str, versionCode: int, minSdkVersion: int, targetSdkVersion: int
 ) -> None:
     pass
+
+
+def set_color(name: str, value: str, root) -> None:
+    pass
+
+
+def change_colors(values: dict[str, str]) -> None:
+    pass
+
+
+def hex_to_lottie(hex_color: str) -> tuple[float, float, float]:
+    pass
