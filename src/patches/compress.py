@@ -257,7 +257,7 @@ def apply(settings: PatchConfig_Compress, globals: PatchGlobals) -> bool:
 
     if settings["remove_AI_voiceover"]:
         log.info("[COMPRESS] removing AI voiceover")
-        remove_AI_voiceover()
+        remove_AI_voiceover(globals)
 
     if settings["remove_debug_lines"]:
         log.info("[COMPRESS] stripping debug lines")

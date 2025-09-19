@@ -6,9 +6,9 @@
     "readme": "https://github.com/AniX-org/anixart-patcher-patches-repo/blob/gh-pages/src/patches/compress.md",
     "version": "1.0.0",
     "initDate": "1758283176",
-    "modDate": "1758288678",
+    "modDate": "1758289905",
     "uuid": "1d35c697-6a41-4d22-9dc9-4380ed66092f",
-    "sha256": "d17a17b200d7b9e7bfba47fbac0f87e1ed0bc99d512cf26448438dd628d1961f",
+    "sha256": "84dd549d91ef8e7c1ff68492fe34e06e26304cc34298f7d87b8868c4e96f380b",
     "priority": -10,
     "tags": [
         "undefined"
