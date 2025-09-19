@@ -15,3 +15,4 @@ class PatchGlobals(TypedDict):
     app_sdk_version_max: int
     patches_enabled: list[PatchMetaData]
     patches_statuses: list[PatchStatus]
+    resource_path: str
