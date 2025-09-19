@@ -1,0 +1,56 @@
+{
+    "filename": "use_own_api.py",
+    "title": "Использовать кастомный API",
+    "description": "Патч заменяет ссылки API на свои",
+    "author": "Radiquum, seele",
+    "readme": "",
+    "version": "1.0.0",
+    "initDate": "1758293953",
+    "modDate": "1758297469",
+    "uuid": "5acfc7c3-fcd0-43f2-9ac6-2b48597d7ed2",
+    "sha256": "3127d0e0a96e458c3c1209295ee9ace478cd30309f83569da0c69c6429f1802a",
+    "priority": 15,
+    "tags": [
+        "undefined"
+    ],
+    "settings": {
+        "api_base": "",
+        "api_dir": "smali_classes2/com/swiftsoft/anixartd/network/api",
+        "api_append_base": [
+            {
+                "file": "ConfigApi.smali",
+                "values": [
+                    "config/toggles"
+                ]
+            },
+            {
+                "file": "ProfileApi.smali",
+                "values": [
+                    "profile/{id}"
+                ]
+            },
+            {
+                "file": "ReleaseApi.smali",
+                "values": [
+                    "release/{r_id}"
+                ]
+            },
+            {
+                "file": "EpisodeApi.smali",
+                "values": [
+                    "episode/{releaseId}",
+                    "episode/{releaseId}/{typeId}",
+                    "episode/{releaseId}/{typeId}/{sourceId}",
+                    "episode/target/{releaseId}/{sourceId}/{position}"
+                ]
+            }
+        ],
+        "api_replace_line": [
+            {
+                "file": "",
+                "from": "",
+                "to": ""
+            }
+        ]
+    }
+}
