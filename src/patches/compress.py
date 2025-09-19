@@ -242,7 +242,7 @@ def apply(settings: PatchConfig_Compress, globals: PatchGlobals) -> bool:
     if settings['remove_unknown_files']:
         log.info("[COMPRESS] removing unknown files")
         remove_unknown_files(settings)
-    
+
     if settings["remove_drawable_files"]:
         log.info("[COMPRESS] removing drawable-xx dirs")
         remove_drawable_files()

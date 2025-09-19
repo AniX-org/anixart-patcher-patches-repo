@@ -3,12 +3,12 @@
     "title": "Уменьшить размер апк",
     "description": "Патч уменьшает размер APK файла, удаляя и заменяя ресурсы",
     "author": "Radiquum",
-    "readme": "",
+    "readme": "https://github.com/AniX-org/anixart-patcher-patches-repo/blob/gh-pages/src/patches/compress.md",
     "version": "1.0.0",
     "initDate": "1758283176",
-    "modDate": "1758283176",
+    "modDate": "1758287915",
     "uuid": "1d35c697-6a41-4d22-9dc9-4380ed66092f",
-    "sha256": "",
+    "sha256": "d17a17b200d7b9e7bfba47fbac0f87e1ed0bc99d512cf26448438dd628d1961f",
     "priority": -10,
     "tags": [
         "undefined"
@@ -18,7 +18,7 @@
         "remove_AI_voiceover": true,
         "remove_debug_lines": true,
         "remove_drawable_files": false,
-        "remove_unknown_files": false,
+        "remove_unknown_files": true,
         "remove_unknown_files_keep_dirs": [
             "META-INF",
             "kotlin"

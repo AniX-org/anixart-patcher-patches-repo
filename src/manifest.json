@@ -3,7 +3,7 @@
         "title": "Anixart-Patcher Official Patch Repository",
         "url": "https://github.com/AniX-org/anixart-patcher-patches-repo/tree/gh-pages",
         "uuid": "e4efc079-67f0-4e8d-8370-f1b06eb09882",
-        "modDate": "1758003970"
+        "modDate": "1758288091"
     },
     "maintainer": {
         "maintainer": "AniX-org (@Radiquum)",
@@ -18,7 +18,7 @@
             "readme": "",
             "version": "1.0.0",
             "initDate": "1757689732",
-            "modDate": "1757839758",
+            "modDate": "1758287750",
             "uuid": "0e773f54-9bd7-4346-9313-e7fb8f4f9d9e",
             "sha256": "f3c4f96b9a886f8c5c8935f00d56ec7358dd16c8d5ca78330c0fe3e56cf0b85b",
             "priority": 10,
@@ -35,7 +35,7 @@
             "readme": "",
             "version": "1.0.0",
             "initDate": "1758003325",
-            "modDate": "1758003924",
+            "modDate": "1758287750",
             "uuid": "b10ab66c-2c38-498d-afe7-934455a6efe8",
             "sha256": "99bc1f63c2608501ff9874bd94369eef1c337073396dd4f90235c9214f12263e",
             "priority": 10,
@@ -67,7 +67,7 @@
             "readme": "",
             "version": "1.0.0",
             "initDate": "1757840464",
-            "modDate": "1757845787",
+            "modDate": "1758287750",
             "uuid": "3fbe2d93-7734-4b1e-99f4-e9fb435b7532",
             "sha256": "0e23eb83c73ab944ef9f9662815a0fc79b455dd9a70a666ef8528cb3b5f60945",
             "priority": 10,
@@ -77,6 +77,34 @@
             "settings": {}
         },
         {
+            "filename": "compress.py",
+            "title": "Уменьшить размер апк",
+            "description": "Патч уменьшает размер APK файла, удаляя и заменяя ресурсы",
+            "author": "Radiquum",
+            "readme": "https://github.com/AniX-org/anixart-patcher-patches-repo/blob/gh-pages/src/patches/compress.md",
+            "version": "1.0.0",
+            "initDate": "1758283176",
+            "modDate": "1758287915",
+            "uuid": "1d35c697-6a41-4d22-9dc9-4380ed66092f",
+            "sha256": "d17a17b200d7b9e7bfba47fbac0f87e1ed0bc99d512cf26448438dd628d1961f",
+            "priority": -10,
+            "tags": [
+                "undefined"
+            ],
+            "settings": {
+                "remove_language_files": true,
+                "remove_AI_voiceover": true,
+                "remove_debug_lines": true,
+                "remove_drawable_files": false,
+                "remove_unknown_files": true,
+                "remove_unknown_files_keep_dirs": [
+                    "META-INF",
+                    "kotlin"
+                ],
+                "compress_png_files": false
+            }
+        },
+        {
             "filename": "disable_3rdparty_login.py",
             "title": "Отключить вход с помощью сервисов",
             "description": "Патч отключает логин с помощью Google и VK",
@@ -84,7 +112,7 @@
             "readme": "",
             "version": "1.0.0",
             "initDate": "1757862822",
-            "modDate": "1757863603",
+            "modDate": "1758287750",
             "uuid": "706f4c12-baee-453a-a293-c0aa86472b58",
             "sha256": "968d61fa2056412f43731646130e67bb1ddff12e2f40fe1b01b502568b6ab2dc",
             "priority": 10,
@@ -94,5 +122,10 @@
             "settings": {}
         }
     ],
-    "resources": []
+    "resources": [
+        {
+            "filename": "blank.mp3",
+            "sha256": "2759cd99c43cff478113c2ecbe75d72ee8832cdc8473a9831dcfc085888e2038"
+        }
+    ]
 }
