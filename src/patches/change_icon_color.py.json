@@ -1,0 +1,38 @@
+{
+    "filename": "change_icon_color.py",
+    "title": "Изменить цвет иконок",
+    "description": "Патч изменяет цвет иконки приложения и иконок навбара",
+    "author": "Radiquum, wowlikon",
+    "readme": "",
+    "version": "1.0.0",
+    "initDate": "1758299390",
+    "modDate": "1758304786",
+    "uuid": "f10fa276-532f-4a30-9583-4ed80bd319e8",
+    "sha256": "30558a4e13409ef3da0527aeb8aec932fd764f684f0fab3a84944c822983a805",
+    "priority": 10,
+    "tags": [
+        "UI"
+    ],
+    "settings": {
+        "splash": {
+            "light": {
+                "primary": "#ffffb1ce",
+                "secondary": "#ff91d1fd"
+            },
+            "night": {
+                "primary": "#ffffb1ce",
+                "secondary": "#ffffffff"
+            }
+        },
+        "menu": {
+            "light": {
+                "active": "#ffffb1ce",
+                "inactive": "#ff000000"
+            },
+            "night": {
+                "active": "#ffffb1ce",
+                "inactive": "#ffffffff"
+            }
+        }
+    }
+}
