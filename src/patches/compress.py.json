@@ -1,0 +1,28 @@
+{
+    "filename": "compress.py",
+    "title": "Уменьшить размер апк",
+    "description": "Патч уменьшает размер APK файла, удаляя и заменяя ресурсы",
+    "author": "Radiquum",
+    "readme": "",
+    "version": "1.0.0",
+    "initDate": "1758283176",
+    "modDate": "1758283176",
+    "uuid": "1d35c697-6a41-4d22-9dc9-4380ed66092f",
+    "sha256": "",
+    "priority": -10,
+    "tags": [
+        "undefined"
+    ],
+    "settings": {
+        "remove_language_files": true,
+        "remove_AI_voiceover": true,
+        "remove_debug_lines": true,
+        "remove_drawable_files": false,
+        "remove_unknown_files": false,
+        "remove_unknown_files_keep_dirs": [
+            "META-INF",
+            "kotlin"
+        ],
+        "compress_png_files": false
+    }
+}
