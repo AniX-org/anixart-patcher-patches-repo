@@ -12,11 +12,27 @@ def save_apktool_yml(
     pass
 
 
-def set_color(name: str, value: str, root) -> None:
+def change_colors(values: dict[str, str], mode: str = "") -> None:
     pass
 
 
-def change_colors(values: dict[str, str], mode: str = "") -> None:
+def change_attributes(file_path: str, values: dict[str, str], xpath=".//*") -> None:
+    pass
+
+
+def change_attributes_all(file_path: str, values: dict[str, str], xpath=".//*") -> None:
+    pass
+
+
+def change_attributes_with_value(
+    file_path: str, values: dict[str, str], search_value: str, xpath=".//*"
+) -> None:
+    pass
+
+
+def change_attributes_all_with_value(
+    file_path: str, values: dict[str, str], search_value: str, xpath=".//*"
+) -> None:
     pass
 
 

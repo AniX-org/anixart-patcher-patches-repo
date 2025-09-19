@@ -3,7 +3,7 @@
         "title": "Anixart-Patcher Official Patch Repository",
         "url": "https://github.com/AniX-org/anixart-patcher-patches-repo/tree/gh-pages",
         "uuid": "e4efc079-67f0-4e8d-8370-f1b06eb09882",
-        "modDate": "1758311741"
+        "modDate": "1758316744"
     },
     "maintainer": {
         "maintainer": "AniX-org (@Radiquum)",
@@ -140,9 +140,9 @@
             "readme": "",
             "version": "1.0.0",
             "initDate": "1758299390",
-            "modDate": "1758311687",
+            "modDate": "1758316575",
             "uuid": "f10fa276-532f-4a30-9583-4ed80bd319e8",
-            "sha256": "3f5637f040dc27c5aa8d77630a7edaa854f5d1faf78976793b64936e4afbfe29",
+            "sha256": "ed00587506e2ecbee4c961e03473fd197af0ecda20b9d55add3582009e6d8e43",
             "priority": 10,
             "tags": [
                 "UI"
@@ -170,6 +170,11 @@
                         "active-bg": "#ff494458",
                         "inactive-fg": "#ff616161"
                     }
+                },
+                "icon": {
+                    "primary": "#ffff6060",
+                    "secondary": "#ff313131",
+                    "background": "#ff000000"
                 }
             }
         },

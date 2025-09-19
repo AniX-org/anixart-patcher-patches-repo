@@ -11,7 +11,12 @@ from scripts.patch_funcs import PatchGlobals
 from lxml import etree
 import json
 
-from scripts.utils import change_colors, hex_to_lottie, set_color
+from scripts.utils import (
+    change_attributes_all,
+    change_attributes_all_with_value,
+    change_colors,
+    hex_to_lottie,
+)
 
 
 # Patch
@@ -36,9 +41,16 @@ class Menu(TypedDict):
     night: Menu_Colors
 
 
+class Icon(TypedDict):
+    primary: str
+    secondary: str
+    background: str
+
+
 class PatchConfig_ChangeIconColor(TypedDict):
     splash: Splash
     menu: Menu
+    icon: Icon
     change_navigation_bar: bool
 
 
@@ -140,7 +152,9 @@ def change_navbar(settings: PatchConfig_ChangeIconColor):
         {
             "bottom_nav_indicator_active": settings["menu"]["light"]["active-bg"],
             "bottom_nav_indicator_icon_checked": settings["menu"]["light"]["active-fg"],
-            "bottom_nav_indicator_label_checked": settings["menu"]["light"]["active-fg"],
+            "bottom_nav_indicator_label_checked": settings["menu"]["light"][
+                "active-fg"
+            ],
             "bottom_nav_indicator_icon": settings["menu"]["light"]["inactive-fg"],
             "bottom_nav_indicator_label": settings["menu"]["light"]["inactive-fg"],
         },
@@ -150,11 +164,33 @@ def change_navbar(settings: PatchConfig_ChangeIconColor):
         {
             "bottom_nav_indicator_active": settings["menu"]["night"]["active-bg"],
             "bottom_nav_indicator_icon_checked": settings["menu"]["night"]["active-fg"],
-            "bottom_nav_indicator_label_checked": settings["menu"]["night"]["active-fg"],
+            "bottom_nav_indicator_label_checked": settings["menu"]["night"][
+                "active-fg"
+            ],
             "bottom_nav_indicator_icon": settings["menu"]["night"]["inactive-fg"],
             "bottom_nav_indicator_label": settings["menu"]["night"]["inactive-fg"],
         },
-        "-night")
+        "-night",
+    )
+
+
+def change_icon(settings: PatchConfig_ChangeIconColor, parser):
+    change_colors({"ic_launcher_background": settings["icon"]["background"]})
+    for filename in ["$ic_launcher_foreground__0", "$ic_banner_foreground__0"]:
+        change_attributes_all(
+            f"{config['folders']['decompiled']}/res/drawable-v24/{filename}.xml",
+            {f"{{{config['xml_ns']['android']}}}color": settings["icon"]["primary"]},
+        )
+    change_attributes_all_with_value(
+        f"{config['folders']['decompiled']}/res/drawable-v24/ic_launcher_foreground.xml",
+        {f"{{{config['xml_ns']['android']}}}fillColor": settings["icon"]["secondary"]},
+        "#ffffffff",
+    )
+    change_attributes_all_with_value(
+        f"{config['folders']['decompiled']}/res/drawable-v24/ic_banner_foreground.xml",
+        {f"{{{config['xml_ns']['android']}}}fillColor": settings["icon"]["secondary"]},
+        "#ff313131",
+    )
 
 
 def apply(settings: PatchConfig_ChangeIconColor, globals: PatchGlobals) -> bool:
@@ -164,5 +200,5 @@ def apply(settings: PatchConfig_ChangeIconColor, globals: PatchGlobals) -> bool:
     change_signin_logo(settings, drawable_types)
     if settings["change_navigation_bar"]:
         change_navbar(settings)
-
+    change_icon(settings, parser)
     return True
