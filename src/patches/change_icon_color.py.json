@@ -16,11 +16,11 @@
     "settings": {
         "splash": {
             "light": {
-                "primary": "#ffffb1ce",
-                "secondary": "#ff91d1fd"
+                "primary": "#ffea4f4f",
+                "secondary": "#ff323232"
             },
             "night": {
-                "primary": "#ffffb1ce",
+                "primary": "#ffea4f4f",
                 "secondary": "#ffffffff"
             }
         },
