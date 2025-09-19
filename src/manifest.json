@@ -3,7 +3,7 @@
         "title": "Anixart-Patcher Official Patch Repository",
         "url": "https://github.com/AniX-org/anixart-patcher-patches-repo/tree/gh-pages",
         "uuid": "e4efc079-67f0-4e8d-8370-f1b06eb09882",
-        "modDate": "1758310283"
+        "modDate": "1758311741"
     },
     "maintainer": {
         "maintainer": "AniX-org (@Radiquum)",
@@ -140,9 +140,9 @@
             "readme": "",
             "version": "1.0.0",
             "initDate": "1758299390",
-            "modDate": "1758310280",
+            "modDate": "1758311687",
             "uuid": "f10fa276-532f-4a30-9583-4ed80bd319e8",
-            "sha256": "96e76ab606b10261611cfe8aabc46f3a8d2298b373bbbc934bf8937f262efe74",
+            "sha256": "3f5637f040dc27c5aa8d77630a7edaa854f5d1faf78976793b64936e4afbfe29",
             "priority": 10,
             "tags": [
                 "UI"
@@ -150,22 +150,25 @@
             "settings": {
                 "splash": {
                     "light": {
-                        "primary": "#ffffb1ce",
-                        "secondary": "#ff91d1fd"
+                        "primary": "#ffea4f4f",
+                        "secondary": "#ff323232"
                     },
                     "night": {
-                        "primary": "#ffffb1ce",
+                        "primary": "#ffea4f4f",
                         "secondary": "#ffffffff"
                     }
                 },
+                "change_navigation_bar": true,
                 "menu": {
                     "light": {
-                        "active": "#ffffb1ce",
-                        "inactive": "#ff000000"
+                        "active-fg": "#fff04e4e",
+                        "active-bg": "#ffffdad7",
+                        "inactive-fg": "#ff757575"
                     },
                     "night": {
-                        "active": "#ffffb1ce",
-                        "inactive": "#ffffffff"
+                        "active-fg": "#ffe8def7",
+                        "active-bg": "#ff494458",
+                        "inactive-fg": "#ff616161"
                     }
                 }
             }

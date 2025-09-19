@@ -11,7 +11,7 @@ from scripts.patch_funcs import PatchGlobals
 from lxml import etree
 import json
 
-from scripts.utils import hex_to_lottie
+from scripts.utils import change_colors, hex_to_lottie, set_color
 
 
 # Patch
@@ -26,8 +26,9 @@ class Splash(TypedDict):
 
 
 class Menu_Colors(TypedDict):
-    active: str
-    inactive: str
+    active_fg: str
+    active_bg: str
+    inactive_fg: str
 
 
 class Menu(TypedDict):
@@ -109,25 +110,51 @@ def change_signin_logo(
         # right_ear_color = data["layers"][1]["shapes"][0]["it"][1]["c"]["k"]
         # body_color = data["layers"][2]["shapes"][0]["it"][3]["g"]["k"]["k"]
 
-        data["layers"][0]["shapes"][0]["it"][1]["c"]["k"] = [] # left_ear_color
-        data["layers"][1]["shapes"][0]["it"][1]["c"]["k"] = [] # right_ear_color
-        data["layers"][2]["shapes"][0]["it"][3]["g"]["k"]["k"] = [] # body_color
+        data["layers"][0]["shapes"][0]["it"][1]["c"]["k"] = []  # left_ear_color
+        data["layers"][1]["shapes"][0]["it"][1]["c"]["k"] = []  # right_ear_color
+        data["layers"][2]["shapes"][0]["it"][3]["g"]["k"]["k"] = []  # body_color
 
         for c in secondary:
-            data["layers"][0]["shapes"][0]["it"][1]["c"]["k"].append(c) # color 0-1
-            data["layers"][1]["shapes"][0]["it"][1]["c"]["k"].append(c) # color 0-1
-        data["layers"][0]["shapes"][0]["it"][1]["c"]["k"].append(1) # opacity
-        data["layers"][1]["shapes"][0]["it"][1]["c"]["k"].append(1) # opacity
+            data["layers"][0]["shapes"][0]["it"][1]["c"]["k"].append(c)  # color 0-1
+            data["layers"][1]["shapes"][0]["it"][1]["c"]["k"].append(c)  # color 0-1
+        data["layers"][0]["shapes"][0]["it"][1]["c"]["k"].append(1)  # opacity
+        data["layers"][1]["shapes"][0]["it"][1]["c"]["k"].append(1)  # opacity
 
-        data["layers"][2]["shapes"][0]["it"][3]["g"]["k"]["k"].append(0) # position
+        data["layers"][2]["shapes"][0]["it"][3]["g"]["k"]["k"].append(0)  # position
         for c in primary:
-            data["layers"][2]["shapes"][0]["it"][3]["g"]["k"]["k"].append(c) # color 0-1
-        data["layers"][2]["shapes"][0]["it"][3]["g"]["k"]["k"].append(1) # position
+            data["layers"][2]["shapes"][0]["it"][3]["g"]["k"]["k"].append(
+                c
+            )  # color 0-1
+        data["layers"][2]["shapes"][0]["it"][3]["g"]["k"]["k"].append(1)  # position
         for c in primary:
-            data["layers"][2]["shapes"][0]["it"][3]["g"]["k"]["k"].append(c) # color 0-1
+            data["layers"][2]["shapes"][0]["it"][3]["g"]["k"]["k"].append(
+                c
+            )  # color 0-1
 
         with open(file_path, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=0)
+
+
+def change_navbar(settings: PatchConfig_ChangeIconColor):
+    change_colors(
+        {
+            "bottom_nav_indicator_active": settings["menu"]["light"]["active-bg"],
+            "bottom_nav_indicator_icon_checked": settings["menu"]["light"]["active-fg"],
+            "bottom_nav_indicator_label_checked": settings["menu"]["light"]["active-fg"],
+            "bottom_nav_indicator_icon": settings["menu"]["light"]["inactive-fg"],
+            "bottom_nav_indicator_label": settings["menu"]["light"]["inactive-fg"],
+        },
+        "",
+    )
+    change_colors(
+        {
+            "bottom_nav_indicator_active": settings["menu"]["night"]["active-bg"],
+            "bottom_nav_indicator_icon_checked": settings["menu"]["night"]["active-fg"],
+            "bottom_nav_indicator_label_checked": settings["menu"]["night"]["active-fg"],
+            "bottom_nav_indicator_icon": settings["menu"]["night"]["inactive-fg"],
+            "bottom_nav_indicator_label": settings["menu"]["night"]["inactive-fg"],
+        },
+        "-night")
 
 
 def apply(settings: PatchConfig_ChangeIconColor, globals: PatchGlobals) -> bool:
@@ -135,5 +162,7 @@ def apply(settings: PatchConfig_ChangeIconColor, globals: PatchGlobals) -> bool:
     parser = etree.XMLParser(remove_blank_text=True)
     change_splash(settings, parser, drawable_types)
     change_signin_logo(settings, drawable_types)
+    if settings["change_navigation_bar"]:
+        change_navbar(settings)
 
     return True

@@ -16,7 +16,7 @@ def set_color(name: str, value: str, root) -> None:
     pass
 
 
-def change_colors(values: dict[str, str]) -> None:
+def change_colors(values: dict[str, str], mode: str = "") -> None:
     pass
 
 
