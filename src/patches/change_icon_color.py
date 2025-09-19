@@ -9,6 +9,9 @@ from typing import TypedDict
 from config import config, log
 from scripts.patch_funcs import PatchGlobals
 from lxml import etree
+import json
+
+from scripts.utils import hex_to_lottie
 
 
 # Patch
@@ -86,9 +89,51 @@ def change_splash(
         tree.write(file_path, pretty_print=True, xml_declaration=True, encoding="utf-8")
 
 
+def change_signin_logo(
+    settings: PatchConfig_ChangeIconColor, drawable_types: list[str]
+):
+
+    for typ in drawable_types:
+        primary = hex_to_lottie(settings["splash"]["light"]["primary"])
+        secondary = hex_to_lottie(settings["splash"]["light"]["secondary"])
+        if typ == "-night":
+            primary = hex_to_lottie(settings["splash"]["night"]["primary"])
+            secondary = hex_to_lottie(settings["splash"]["night"]["secondary"])
+
+        data = {}
+        file_path = f"{config['folders']['decompiled']}/res/raw{typ}/logo.json"
+        with open(file_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        # left_ear_color = data["layers"][0]["shapes"][0]["it"][1]["c"]["k"]
+        # right_ear_color = data["layers"][1]["shapes"][0]["it"][1]["c"]["k"]
+        # body_color = data["layers"][2]["shapes"][0]["it"][3]["g"]["k"]["k"]
+
+        data["layers"][0]["shapes"][0]["it"][1]["c"]["k"] = [] # left_ear_color
+        data["layers"][1]["shapes"][0]["it"][1]["c"]["k"] = [] # right_ear_color
+        data["layers"][2]["shapes"][0]["it"][3]["g"]["k"]["k"] = [] # body_color
+
+        for c in secondary:
+            data["layers"][0]["shapes"][0]["it"][1]["c"]["k"].append(c) # color 0-1
+            data["layers"][1]["shapes"][0]["it"][1]["c"]["k"].append(c) # color 0-1
+        data["layers"][0]["shapes"][0]["it"][1]["c"]["k"].append(1) # opacity
+        data["layers"][1]["shapes"][0]["it"][1]["c"]["k"].append(1) # opacity
+
+        data["layers"][2]["shapes"][0]["it"][3]["g"]["k"]["k"].append(0) # position
+        for c in primary:
+            data["layers"][2]["shapes"][0]["it"][3]["g"]["k"]["k"].append(c) # color 0-1
+        data["layers"][2]["shapes"][0]["it"][3]["g"]["k"]["k"].append(1) # position
+        for c in primary:
+            data["layers"][2]["shapes"][0]["it"][3]["g"]["k"]["k"].append(c) # color 0-1
+
+        with open(file_path, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=0)
+
+
 def apply(settings: PatchConfig_ChangeIconColor, globals: PatchGlobals) -> bool:
     drawable_types = ["", "-night"]
     parser = etree.XMLParser(remove_blank_text=True)
     change_splash(settings, parser, drawable_types)
+    change_signin_logo(settings, drawable_types)
 
     return True

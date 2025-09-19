@@ -18,3 +18,7 @@ def set_color(name: str, value: str, root) -> None:
 
 def change_colors(values: dict[str, str]) -> None:
     pass
+
+
+def hex_to_lottie(hex_color: str) -> tuple[float, float, float]:
+    pass
