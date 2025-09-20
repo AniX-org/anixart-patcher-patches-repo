@@ -6,9 +6,9 @@
     "readme": "",
     "version": "1.0.0",
     "initDate": "1758299390",
-    "modDate": "1758316575",
+    "modDate": "1758370675",
     "uuid": "f10fa276-532f-4a30-9583-4ed80bd319e8",
-    "sha256": "ed00587506e2ecbee4c961e03473fd197af0ecda20b9d55add3582009e6d8e43",
+    "sha256": "1b4322f0a5f2c02fa87df1410387824852096d68e6920a1828a8b14e511a1af4",
     "priority": 10,
     "tags": [
         "UI"
@@ -24,7 +24,7 @@
                 "secondary": "#ffffffff"
             }
         },
-        "change_navigation_bar": true,
+        "change_navigation_bar": false,
         "menu": {
             "light": {
                 "active-fg": "#fff04e4e",

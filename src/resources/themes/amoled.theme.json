@@ -1,0 +1,444 @@
+{
+    "attributes": [
+        {
+            "file_path": "res/layout/fragment_article.xml",
+            "tag_path": "RelativeLayout/LinearLayout",
+            "tag_name": "LinearLayout",
+            "attr_name": "{http://schemas.android.com/apk/res/android}background",
+            "attr_value": {
+                "from": "?backgroundColorTertiary",
+                "to": "?android:colorBackground"
+            }
+        },
+        {
+            "file_path": "res/layout/fragment_article.xml",
+            "tag_path": "RelativeLayout/LinearLayout/LinearLayout[1]",
+            "tag_name": "LinearLayout",
+            "attr_name": "{http://schemas.android.com/apk/res/android}background",
+            "attr_value": {
+                "from": "?selectableItemBackground",
+                "to": "?android:colorBackground"
+            }
+        },
+        {
+            "file_path": "res/layout/fragment_article.xml",
+            "tag_path": "RelativeLayout/LinearLayout/LinearLayout[2]",
+            "tag_name": "LinearLayout",
+            "attr_name": "{http://schemas.android.com/apk/res/android}background",
+            "attr_value": {
+                "from": "?backgroundColorSecondary",
+                "to": "?android:colorBackground"
+            }
+        },
+        {
+            "file_path": "res/layout/fragment_article.xml",
+            "tag_path": "RelativeLayout/LinearLayout/LinearLayout[2]/LinearLayout/androidx.appcompat.widget.AppCompatImageView",
+            "tag_name": "androidx.appcompat.widget.AppCompatImageView",
+            "attr_name": "{http://schemas.android.com/apk/res/android}background",
+            "attr_value": {
+                "from": "?selectableItemBackgroundBorderless",
+                "to": "?android:colorBackground"
+            }
+        },
+        {
+            "file_path": "res/layout/fragment_replies.xml",
+            "tag_path": "RelativeLayout/LinearLayout/RelativeLayout",
+            "tag_name": "RelativeLayout",
+            "attr_name": "{http://schemas.android.com/apk/res/android}background",
+            "attr_value": {
+                "from": "?selectableItemBackground",
+                "to": "?android:colorBackground"
+            }
+        },
+        {
+            "file_path": "res/layout/fragment_replies.xml",
+            "tag_path": "RelativeLayout/LinearLayout/LinearLayout[1]",
+            "tag_name": "LinearLayout",
+            "attr_name": "{http://schemas.android.com/apk/res/android}background",
+            "attr_value": {
+                "from": "?selectableItemBackground",
+                "to": "?android:colorBackground"
+            }
+        },
+        {
+            "file_path": "res/layout/fragment_replies.xml",
+            "tag_path": "RelativeLayout/LinearLayout/LinearLayout[2]",
+            "tag_name": "LinearLayout",
+            "attr_name": "{http://schemas.android.com/apk/res/android}background",
+            "attr_value": {
+                "from": "?backgroundColorSecondary",
+                "to": "?android:colorBackground"
+            }
+        },
+        {
+            "file_path": "res/layout/fragment_replies.xml",
+            "tag_path": "RelativeLayout/LinearLayout/LinearLayout[2]/LinearLayout/androidx.appcompat.widget.AppCompatImageView",
+            "tag_name": "androidx.appcompat.widget.AppCompatImageView",
+            "attr_name": "{http://schemas.android.com/apk/res/android}background",
+            "attr_value": {
+                "from": "?selectableItemBackgroundBorderless",
+                "to": "?android:colorBackground"
+            }
+        },
+        {
+            "file_path": "res/layout/comments.xml",
+            "tag_path": "RelativeLayout/LinearLayout",
+            "tag_name": "LinearLayout",
+            "attr_name": "{http://schemas.android.com/apk/res/android}background",
+            "attr_value": {
+                "from": "?backgroundColorTertiary",
+                "to": "?android:colorBackground"
+            }
+        },
+        {
+            "file_path": "res/layout/comments.xml",
+            "tag_path": "RelativeLayout/LinearLayout/LinearLayout[1]",
+            "tag_name": "LinearLayout",
+            "attr_name": "{http://schemas.android.com/apk/res/android}background",
+            "attr_value": {
+                "from": "?selectableItemBackground",
+                "to": "?android:colorBackground"
+            }
+        },
+        {
+            "file_path": "res/layout/comments.xml",
+            "tag_path": "RelativeLayout/LinearLayout/LinearLayout[2]",
+            "tag_name": "LinearLayout",
+            "attr_name": "{http://schemas.android.com/apk/res/android}background",
+            "attr_value": {
+                "from": "?backgroundColorSecondary",
+                "to": "?android:colorBackground"
+            }
+        },
+        {
+            "file_path": "res/layout/comments.xml",
+            "tag_path": "RelativeLayout/LinearLayout/LinearLayout[2]/LinearLayout/androidx.appcompat.widget.AppCompatImageView",
+            "tag_name": "androidx.appcompat.widget.AppCompatImageView",
+            "attr_name": "{http://schemas.android.com/apk/res/android}background",
+            "attr_value": {
+                "from": "?selectableItemBackgroundBorderless",
+                "to": "?android:colorBackground"
+            }
+        },
+        {
+            "file_path": "res/layout/fragment_comments.xml",
+            "tag_path": "RelativeLayout/LinearLayout/LinearLayout[2]",
+            "tag_name": "LinearLayout",
+            "attr_name": "{http://schemas.android.com/apk/res/android}background",
+            "attr_value": {
+                "from": "?backgroundColorSecondary",
+                "to": "?android:colorBackground"
+            }
+        },
+        {
+            "file_path": "res/layout/fragment_comments.xml",
+            "tag_path": "RelativeLayout/LinearLayout/LinearLayout[2]/LinearLayout/androidx.appcompat.widget.AppCompatImageView",
+            "tag_name": "androidx.appcompat.widget.AppCompatImageView",
+            "attr_name": "{http://schemas.android.com/apk/res/android}background",
+            "attr_value": {
+                "from": "?selectableItemBackgroundBorderless",
+                "to": "?android:colorBackground"
+            }
+        }
+    ],
+    "text": [
+        {
+            "file_path": "res/values-night-v31/styles.xml",
+            "tag_path": "style[1]/item[2]",
+            "tag_name": "item",
+            "text": {
+                "from": "#ff121212",
+                "to": "#ff000000"
+            }
+        },
+        {
+            "file_path": "res/values-night-v31/styles.xml",
+            "tag_path": "style[2]/item[1]",
+            "tag_name": "item",
+            "text": {
+                "from": "#ff121212",
+                "to": "#ff000000"
+            }
+        },
+        {
+            "file_path": "res/values-night-v31/styles.xml",
+            "tag_path": "style[2]/item[3]",
+            "tag_name": "item",
+            "text": {
+                "from": "#ff121212",
+                "to": "#ff000000"
+            }
+        },
+        {
+            "file_path": "res/values-night-v31/styles.xml",
+            "tag_path": "style[2]/item[6]",
+            "tag_name": "item",
+            "text": {
+                "from": "#ff121212",
+                "to": "#ff000000"
+            }
+        },
+        {
+            "file_path": "res/values-night/colors.xml",
+            "tag_path": "color[17]",
+            "tag_name": "color",
+            "text": {
+                "from": "#ff252525",
+                "to": "#ff000000"
+            }
+        },
+        {
+            "file_path": "res/values-night/colors.xml",
+            "tag_path": "color[23]",
+            "tag_name": "color",
+            "text": {
+                "from": "#ff424242",
+                "to": "#ff252525"
+            }
+        },
+        {
+            "file_path": "res/values-night/colors.xml",
+            "tag_path": "color[41]",
+            "tag_name": "color",
+            "text": {
+                "from": "#ff252525",
+                "to": "#ff121212"
+            }
+        },
+        {
+            "file_path": "res/values-night/colors.xml",
+            "tag_path": "color[43]",
+            "tag_name": "color",
+            "text": {
+                "from": "#ff252525",
+                "to": "#ff121212"
+            }
+        },
+        {
+            "file_path": "res/values-night/colors.xml",
+            "tag_path": "color[45]",
+            "tag_name": "color",
+            "text": {
+                "from": "#ff252525",
+                "to": "#ff121212"
+            }
+        },
+        {
+            "file_path": "res/values-night/colors.xml",
+            "tag_path": "color[47]",
+            "tag_name": "color",
+            "text": {
+                "from": "#ff252525",
+                "to": "#ff121212"
+            }
+        },
+        {
+            "file_path": "res/values-night/colors.xml",
+            "tag_path": "color[50]",
+            "tag_name": "color",
+            "text": {
+                "from": "#ff252525",
+                "to": "#ff121212"
+            }
+        },
+        {
+            "file_path": "res/values-night/colors.xml",
+            "tag_path": "color[51]",
+            "tag_name": "color",
+            "text": {
+                "from": "#ff252525",
+                "to": "#ff121212"
+            }
+        },
+        {
+            "file_path": "res/values-night/colors.xml",
+            "tag_path": "color[61]",
+            "tag_name": "color",
+            "text": {
+                "from": "#ff252525",
+                "to": "#ff121212"
+            }
+        },
+        {
+            "file_path": "res/values-night/colors.xml",
+            "tag_path": "color[64]",
+            "tag_name": "color",
+            "text": {
+                "from": "#ff121212",
+                "to": "#ff000000"
+            }
+        },
+        {
+            "file_path": "res/values-night/colors.xml",
+            "tag_path": "color[65]",
+            "tag_name": "color",
+            "text": {
+                "from": "#80121212",
+                "to": "#80000000"
+            }
+        },
+        {
+            "file_path": "res/values-night/colors.xml",
+            "tag_path": "color[66]",
+            "tag_name": "color",
+            "text": {
+                "from": "#cb121212",
+                "to": "#cb000000"
+            }
+        },
+        {
+            "file_path": "res/values-night/colors.xml",
+            "tag_path": "color[67]",
+            "tag_name": "color",
+            "text": {
+                "from": "#00121212",
+                "to": "#00000000"
+            }
+        },
+        {
+            "file_path": "res/values-night/colors.xml",
+            "tag_path": "color[68]",
+            "tag_name": "color",
+            "text": {
+                "from": "#ff252525",
+                "to": "#ff121212"
+            }
+        },
+        {
+            "file_path": "res/values-night/colors.xml",
+            "tag_path": "color[77]",
+            "tag_name": "color",
+            "text": {
+                "from": "#ff121212",
+                "to": "#ff000000"
+            }
+        },
+        {
+            "file_path": "res/values-night/colors.xml",
+            "tag_path": "color[80]",
+            "tag_name": "color",
+            "text": {
+                "from": "#ff252525",
+                "to": "#ff121212"
+            }
+        },
+        {
+            "file_path": "res/values-night/colors.xml",
+            "tag_path": "color[85]",
+            "tag_name": "color",
+            "text": {
+                "from": "#ff252525",
+                "to": "#ff121212"
+            }
+        },
+        {
+            "file_path": "res/values-night-v29/styles.xml",
+            "tag_path": "style[1]/item[3]",
+            "tag_name": "item",
+            "text": {
+                "from": "#ff252525",
+                "to": "#ff121212"
+            }
+        },
+        {
+            "file_path": "res/values-night-v29/styles.xml",
+            "tag_path": "style[2]/item[1]",
+            "tag_name": "item",
+            "text": {
+                "from": "#ff121212",
+                "to": "#ff000000"
+            }
+        },
+        {
+            "file_path": "res/values-night-v29/styles.xml",
+            "tag_path": "style[2]/item[3]",
+            "tag_name": "item",
+            "text": {
+                "from": "#ff121212",
+                "to": "#ff000000"
+            }
+        },
+        {
+            "file_path": "res/values-night-v29/styles.xml",
+            "tag_path": "style[2]/item[4]",
+            "tag_name": "item",
+            "text": {
+                "from": "#ff252525",
+                "to": "#ff000000"
+            }
+        },
+        {
+            "file_path": "res/values-night-v29/styles.xml",
+            "tag_path": "style[2]/item[11]",
+            "tag_name": "item",
+            "text": {
+                "from": "#ff252525",
+                "to": "#ff121212"
+            }
+        },
+        {
+            "file_path": "res/values-night-v29/styles.xml",
+            "tag_path": "style[2]/item[15]",
+            "tag_name": "item",
+            "text": {
+                "from": "#ff121212",
+                "to": "#ff000000"
+            }
+        },
+        {
+            "file_path": "res/values-night-v29/styles.xml",
+            "tag_path": "style[2]/item[18]",
+            "tag_name": "item",
+            "text": {
+                "from": "#ff121212",
+                "to": "#ff000000"
+            }
+        },
+        {
+            "file_path": "res/values-night-v29/styles.xml",
+            "tag_path": "style[2]/item[19]",
+            "tag_name": "item",
+            "text": {
+                "from": "#ff252525",
+                "to": "#ff121212"
+            }
+        },
+        {
+            "file_path": "res/values-night-v29/styles.xml",
+            "tag_path": "style[2]/item[23]",
+            "tag_name": "item",
+            "text": {
+                "from": "#ff252525",
+                "to": "#ff121212"
+            }
+        },
+        {
+            "file_path": "res/values-night-v29/styles.xml",
+            "tag_path": "style[2]/item[33]",
+            "tag_name": "item",
+            "text": {
+                "from": "#ff424242",
+                "to": "#ff252525"
+            }
+        },
+        {
+            "file_path": "res/values-night-v29/styles.xml",
+            "tag_path": "style[2]/item[38]",
+            "tag_name": "item",
+            "text": {
+                "from": "#ff424242",
+                "to": "#ff252525"
+            }
+        },
+        {
+            "file_path": "res/values-night-v29/styles.xml",
+            "tag_path": "style[2]/item[40]",
+            "tag_name": "item",
+            "text": {
+                "from": "#ff252525",
+                "to": "#ff121212"
+            }
+        }
+    ],
+    "files": []
+}

@@ -1,0 +1,24 @@
+{
+    "filename": "change_color_theme.py",
+    "title": "Изменить тему",
+    "description": "Патч изменяет тему на чёрную, материал или материал с чёрным фоном",
+    "author": "Radiquum, seele",
+    "readme": "",
+    "version": "1.0.0",
+    "initDate": "1758356414",
+    "modDate": "1758369073",
+    "uuid": "256e7bc0-1873-4d9a-9b83-37fe5d9143bf",
+    "sha256": "98bf8db5ffdda1f27d00f0489c0a56d95d721221c24eb27f962e09b60189dc4a",
+    "priority": 15,
+    "tags": [
+        "UI"
+    ],
+    "settings": {
+        "default": null,
+        "themes": [
+            "amoled",
+            "material",
+            "material_amoled"
+        ]
+    }
+}

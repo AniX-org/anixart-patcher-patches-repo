@@ -147,7 +147,7 @@ def change_signin_logo(
             json.dump(data, f, indent=0)
 
 
-def change_navbar(settings: PatchConfig_ChangeIconColor):
+def change_navbar(settings: PatchConfig_ChangeIconColor, parser):
     change_colors(
         {
             "bottom_nav_indicator_active": settings["menu"]["light"]["active-bg"],
@@ -172,6 +172,18 @@ def change_navbar(settings: PatchConfig_ChangeIconColor):
         },
         "-night",
     )
+
+    file_path = f"{config['folders']['decompiled']}/res/values-night-v31/styles.xml"
+    tree = etree.parse(file_path, parser)
+    root = tree.getroot()
+    for el in root:
+        if el.attrib.get("name", None) == "BottomNavigationView":
+            print(el.tag, el.attrib.get("name", None))
+            root.remove(el)
+        elif el.attrib.get("name", None) == "BottomNavigationView.ActiveIndicator":
+            print(el.tag, el.attrib.get("name", None))
+            root.remove(el)
+    tree.write(file_path, pretty_print=True, xml_declaration=True, encoding="utf-8")
 
 
 def change_icon(settings: PatchConfig_ChangeIconColor, parser):
@@ -199,6 +211,6 @@ def apply(settings: PatchConfig_ChangeIconColor, globals: PatchGlobals) -> bool:
     change_splash(settings, parser, drawable_types)
     change_signin_logo(settings, drawable_types)
     if settings["change_navigation_bar"]:
-        change_navbar(settings)
+        change_navbar(settings, parser)
     change_icon(settings, parser)
     return True

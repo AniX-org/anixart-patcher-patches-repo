@@ -3,7 +3,7 @@
         "title": "Anixart-Patcher Official Patch Repository",
         "url": "https://github.com/AniX-org/anixart-patcher-patches-repo/tree/gh-pages",
         "uuid": "e4efc079-67f0-4e8d-8370-f1b06eb09882",
-        "modDate": "1758316744"
+        "modDate": "1758370970"
     },
     "maintainer": {
         "maintainer": "AniX-org (@Radiquum)",
@@ -84,6 +84,30 @@
             }
         },
         {
+            "filename": "change_color_theme.py",
+            "title": "Изменить тему",
+            "description": "Патч изменяет тему на чёрную, материал или материал с чёрным фоном",
+            "author": "Radiquum, seele",
+            "readme": "",
+            "version": "1.0.0",
+            "initDate": "1758356414",
+            "modDate": "1758369073",
+            "uuid": "256e7bc0-1873-4d9a-9b83-37fe5d9143bf",
+            "sha256": "98bf8db5ffdda1f27d00f0489c0a56d95d721221c24eb27f962e09b60189dc4a",
+            "priority": 15,
+            "tags": [
+                "UI"
+            ],
+            "settings": {
+                "default": null,
+                "themes": [
+                    "amoled",
+                    "material",
+                    "material_amoled"
+                ]
+            }
+        },
+        {
             "filename": "change_navigation_bar.py",
             "title": "Изменить бар навигации",
             "description": "Патч изменяет расположение и/или удаляет элементы из бара навигации",
@@ -140,9 +164,9 @@
             "readme": "",
             "version": "1.0.0",
             "initDate": "1758299390",
-            "modDate": "1758316575",
+            "modDate": "1758370675",
             "uuid": "f10fa276-532f-4a30-9583-4ed80bd319e8",
-            "sha256": "ed00587506e2ecbee4c961e03473fd197af0ecda20b9d55add3582009e6d8e43",
+            "sha256": "1b4322f0a5f2c02fa87df1410387824852096d68e6920a1828a8b14e511a1af4",
             "priority": 10,
             "tags": [
                 "UI"
@@ -158,7 +182,7 @@
                         "secondary": "#ffffffff"
                     }
                 },
-                "change_navigation_bar": true,
+                "change_navigation_bar": false,
                 "menu": {
                     "light": {
                         "active-fg": "#fff04e4e",
@@ -229,6 +253,21 @@
             "filename": "blank.mp3",
             "directory": "/compress",
             "sha256": "2759cd99c43cff478113c2ecbe75d72ee8832cdc8473a9831dcfc085888e2038"
+        },
+        {
+            "filename": "material.theme.json",
+            "directory": "/themes",
+            "sha256": "a2a440cdc81c4765082946d9c28afed9798377282cdbcf24e5436d0d7688a375"
+        },
+        {
+            "filename": "amoled.theme.json",
+            "directory": "/themes",
+            "sha256": "332ee87aca62737413a03684e7a8d3d73c19739d164f1e8050e76b344a70d3eb"
+        },
+        {
+            "filename": "material_amoled.theme.json",
+            "directory": "/themes",
+            "sha256": "921d20b152e0a1e1ac4745f945c096452fe354a2d93cf3033fa8f0c2ed817402"
         }
     ]
 }
